@@ -1,0 +1,24 @@
+<!doctype>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <!-- Polyfill for browsers not supporting web components -->
+    <script src="polymer.min.js"></script>
+    <!-- Magic extracted from web component (Could also be part of it) -->
+    <script src='peer.js'></script>
+
+    <!-- Importing our custom element (Could be from a remote location) -->
+    <link rel="import" href="appear-in.html">
+  </head>
+  <body>
+    <!-- Now we can use it as an extension of our DOM -->
+    <!-- attributes: peerId, local, remote -->
+    <appear-in id="a"></appear-in>
+    <appear-in id="b"></appear-in>
+
+    <script>
+
+    </script>
+  </body>
+</html>
