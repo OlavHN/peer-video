@@ -13,15 +13,9 @@ RUN add-apt-repository ppa:chris-lea/node.js
 RUN apt-get update
 RUN apt-get install nodejs -y
 
-# ssh server
-RUN apt-get install openssh-server -y
-
-# Git
-RUN apt-get install git-core -y
-
-# Get repo
-RUN git clone git@github.com:OlavHN/peer-video peer-video
-RUN cd peer-video; npm install
+# Get files
+ADD . peer-video
+RUN npm install --production peer-video
 
 #Start server
 ENV PORT 8000
